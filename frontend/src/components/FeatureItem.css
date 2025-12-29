@@ -1,0 +1,90 @@
+.feature-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.feature-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.feature-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.feature-title {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.feature-description {
+  margin: 0 0 8px 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.feature-meta {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.vote-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background-color: #f8f8f8;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 60px;
+}
+
+.vote-button:hover:not(:disabled) {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+  color: white;
+}
+
+.vote-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.vote-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.vote-count {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .feature-item {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+  }
+
+  .vote-button {
+    min-width: 50px;
+    padding: 6px 12px;
+  }
+}
